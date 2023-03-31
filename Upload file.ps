@@ -1,0 +1,49 @@
+param(
+    [string]$filename,
+    [string]$filepath
+)
+
+# Login API endpoint
+$url = "http://192.168.0.150:80/seeddms/restapi/index.php/login"
+
+# Form data to send with POST request
+$formData = @{
+    user = "admin"
+    pass = "admin"
+}
+
+# Send POST request and get response headers
+$responseHeaders = Invoke-WebRequest -Uri $url -Method Post -ContentType "application/x-www-form-urlencoded" -Body $formData -SessionVariable session | Select-Object -ExpandProperty Headers
+
+# Get the value of the "Set-Cookie" header
+$cookie = $responseHeaders["Set-Cookie"]
+
+# Output the cookie value to the console
+Write-Output "Cookie: $cookie"
+
+# Example usage: send GET request to folder endpoint to retrieve folder ID
+$url = "http://192.168.0.150:80/seeddms/restapi/index.php/folder/FLPR-17-001"
+
+# Send GET request with the cookie
+$response = Invoke-WebRequest -Uri $url -Method Get -WebSession $session -Headers @{ Cookie = $cookie }
+
+# Parse the JSON response to get the folder ID
+$folderId = ($response.Content | ConvertFrom-Json).data.id
+
+Write-Output "Folder ID: $folderId"
+
+# Example usage: send POST request to document upload API endpoint to upload a file
+$url = "http://192.168.0.150:80/seeddms/restapi/index.php/folder/$folderId/document?name=$filename&origfilename=$filepath&comment=test"
+
+# File to upload
+$file = "$filepath"
+
+# Send POST request with the file and cookie
+$response = Invoke-WebRequest -Uri $url -Method Put -WebSession $session -Headers @{ Cookie = $cookie } -Body @{src=$filepath}
+Write-Output "Upload response: $($response.Content)"
+
+
+# Output the filename and filepath to the console
+Write-Output "Filename: $filename"
+Write-Output "Filepath: $filepath"
+                                                                                                                                                                                                                                                                              

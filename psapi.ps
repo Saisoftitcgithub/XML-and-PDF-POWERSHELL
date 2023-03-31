@@ -1,0 +1,19 @@
+# Define the API endpoint
+$endpoint = "http://192.168.0.150:80/seeddms/restapi/index.php/login"
+
+# Define the request body (if required)
+$requestBody = @{
+    user = "admin"
+    pass = "admin"
+}
+
+# Define the request headers (if required)
+$requestHeaders = @{
+    "Content-Type" = "application/x-www-form-urlencoded"
+    }
+
+# Send the API request
+$response = Invoke-RestMethod -Uri $endpoint -Method POST -Headers $requestHeaders -Body $requestBody
+
+# Output the response
+$response

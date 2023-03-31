@@ -1,0 +1,17 @@
+$username = "user123"
+$password = "pass123
+
+# Define the curl command as a string, including the username and password as query parameters
+$curlCmd = "curl -X POSThhttp://192.168.0.150:80/seeddms/restapi/index.php/login -d '{""user"":""$username"",""pass"":""$password""}'"
+
+# Invoke the curl command and capture the response
+$response = Invoke-WebRequest -UseBasicParsing -Uri $curlCmd
+
+# Get the cookies from the response headers
+$cookies = $response.Headers["Set-Cookie"]
+
+# Print the cookies
+Write-Host "Cookies:"
+foreach ($cookie in $cookies) {
+    Write-Host $cookie
+}

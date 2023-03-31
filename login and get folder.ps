@@ -1,0 +1,29 @@
+$id = "FLPR-17-001"
+$url = "http://192.168.0.150:80/seeddms/restapi/index.php/folder/$id"
+
+# Define the API endpoint
+$endpoint = "http://192.168.0.150:80/seeddms/restapi/index.php/login"
+
+# Define the request body (if required)
+$requestBody = @{
+    user = "admin"
+    pass = "admin"
+}
+
+# Define the request headers (if required)
+$requestHeaders = @{
+    "Content-Type" = "application/x-www-form-urlencoded"
+}
+
+# Send the login API request
+$response = Invoke-RestMethod -Uri $endpoint -Method POST -Headers $requestHeaders -Body $requestBody
+
+# Retrieve the contents of the folder using the authenticated session
+$sessionCookie = $response.SessionCookie
+$sessionHeader = @{ Cookie = "PHPSESSID=$sessionCookie" }
+$response = Invoke-WebRequest -Uri $url -Method Get -UseBasicParsing -Headers $sessionHeader
+$responseContent = $response.Content
+$jsonObject = ConvertFrom-Json $responseContent
+
+# Output the contents of the folder
+$jsonObject

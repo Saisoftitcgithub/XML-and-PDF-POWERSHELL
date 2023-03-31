@@ -1,0 +1,12 @@
+$url = "http://192.168.0.150:80/seeddms/restapi/index.php/login"
+$cookie = "mydms_session= "
+$body = @{
+    user = "admin"
+    pass = "admin"
+}
+$webSession = New-Object System.Net.CookieContainer
+$webSession.SetCookies($url, $cookie)
+$headers = @{ "Cookie" = $cookie }
+$response = Invoke-RestMethod -Method POST -Uri $url -WebSession $webSession -Body ($body | ConvertTo-Json) -ContentType "application/json" -Headers $headers
+$responseBody = $response | ConvertTo-Json
+$responseHeaders = $response.Headers

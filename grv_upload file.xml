@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Commands>
+    <ScriptAction>
+      <ScriptCommand xsi:type="RunPowershellCommand" CommandID="62f88d33-7e40-4853-9294-ac8ef15e0520" CommandName="RunPowershellCommand" IsCommented="false" SelectionName="Run Powershell" DefaultPause="0" LineNumber="1" PauseBeforeExeucution="false" CommandEnabled="true" v_ScriptPath="C:\Users\kannan\Desktop\MH\18032023\Apifilegrv.ps" v_PowerShellArgs="-NoProfile -ExecutionPolicy unrestricted" v_ReplaceScriptVariables="No" v_applyToVariableName="vData" />
+    </ScriptAction>
+  </Commands>
+  <Info>
+    <TasktVersion>3.5.1.14</TasktVersion>
+    <Author />
+    <LastRunTime>2023-03-23T10:52:47.0403839+04:00</LastRunTime>
+    <RunTimes>45</RunTimes>
+    <ScriptVersion>0.0.0</ScriptVersion>
+    <Description />
+  </Info>
+  <Variables>
+    <ScriptVariable>
+      <VariableName>filename</VariableName>
+      <VariableValue xsi:type="xsd:string">123456</VariableValue>
+    </ScriptVariable>
+  </Variables>
+</Script>

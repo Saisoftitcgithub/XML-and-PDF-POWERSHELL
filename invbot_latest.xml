@@ -1,0 +1,803 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Commands>
+    <ScriptAction>
+      <ScriptCommand xsi:type="CheckFolderExistsCommand" CommandID="ea0e3153-415b-42ca-9358-4357e798556d" CommandName="CheckFolderExistsCommand" IsCommented="false" SelectionName="Check Folder Exists" DefaultPause="0" LineNumber="1" PauseBeforeExeucution="false" CommandEnabled="true" v_TargetFolderName="⦃vUnpFloder⦄" v_UserVariableName="isFolderExists" />
+    </ScriptAction>
+    <ScriptAction>
+      <ScriptCommand xsi:type="MessageBoxCommand" CommandID="de601ff8-23b9-411d-bcf7-054097485035" CommandName="MessageBoxCommand" IsCommented="true" SelectionName="Show Message" DefaultPause="0" LineNumber="2" PauseBeforeExeucution="false" CommandEnabled="true" v_Message="⦃isFolderExists⦄" v_AutoCloseAfter="0" />
+    </ScriptAction>
+    <ScriptAction>
+      <ScriptCommand xsi:type="BeginIfCommand" CommandID="7452e55b-75f2-482d-9885-ae71401de069" CommandName="BeginIfCommand" IsCommented="false" SelectionName="Begin If" DefaultPause="0" LineNumber="3" PauseBeforeExeucution="false" CommandEnabled="true" v_IfActionType="Boolean Compare">
+        <v_IfActionParameterTable>
+          <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+            <xs:element name="I0AcPionPara34Table020523.123438">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Parameter_x0020_Name" type="xs:string" minOccurs="0" />
+                  <xs:element name="Parameter_x0020_Value" type="xs:string" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="I0AcPionPara34Table020523.123438" msdata:UseCurrentLocale="true">
+              <xs:complexType>
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                  <xs:element ref="I0AcPionPara34Table020523.123438" />
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:schema>
+          <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+            <DocumentElement>
+              <I0AcPionPara34Table020523.123438 diffgr:id="I0AcPionPara34Table020523.1234381" msdata:rowOrder="0" diffgr:hasChanges="modified">
+                <Parameter_x0020_Name>Value1</Parameter_x0020_Name>
+                <Parameter_x0020_Value>⦃isFolderExists⦄</Parameter_x0020_Value>
+              </I0AcPionPara34Table020523.123438>
+              <I0AcPionPara34Table020523.123438 diffgr:id="I0AcPionPara34Table020523.1234382" msdata:rowOrder="1" diffgr:hasChanges="modified">
+                <Parameter_x0020_Name>Operand</Parameter_x0020_Name>
+                <Parameter_x0020_Value>is equal to</Parameter_x0020_Value>
+              </I0AcPionPara34Table020523.123438>
+              <I0AcPionPara34Table020523.123438 diffgr:id="I0AcPionPara34Table020523.1234383" msdata:rowOrder="2" diffgr:hasChanges="modified">
+                <Parameter_x0020_Name>Value2</Parameter_x0020_Name>
+                <Parameter_x0020_Value>True</Parameter_x0020_Value>
+              </I0AcPionPara34Table020523.123438>
+            </DocumentElement>
+            <diffgr:before>
+              <I0AcPionPara34Table020523.123438 diffgr:id="I0AcPionPara34Table020523.1234381" msdata:rowOrder="0">
+                <Parameter_x0020_Name>Value1</Parameter_x0020_Name>
+                <Parameter_x0020_Value>{isFolderExists}</Parameter_x0020_Value>
+              </I0AcPionPara34Table020523.123438>
+              <I0AcPionPara34Table020523.123438 diffgr:id="I0AcPionPara34Table020523.1234382" msdata:rowOrder="1">
+                <Parameter_x0020_Name>Operand</Parameter_x0020_Name>
+                <Parameter_x0020_Value>is equal to</Parameter_x0020_Value>
+              </I0AcPionPara34Table020523.123438>
+              <I0AcPionPara34Table020523.123438 diffgr:id="I0AcPionPara34Table020523.1234383" msdata:rowOrder="2">
+                <Parameter_x0020_Name>Value2</Parameter_x0020_Name>
+                <Parameter_x0020_Value>True</Parameter_x0020_Value>
+              </I0AcPionPara34Table020523.123438>
+            </diffgr:before>
+          </diffgr:diffgram>
+        </v_IfActionParameterTable>
+      </ScriptCommand>
+      <AdditionalScriptCommands>
+        <ScriptCommand xsi:type="GetFilesCommand" CommandID="8c07ccc2-f49f-4870-84c6-cdadae4bb492" CommandName="GetFilesCommand" IsCommented="false" SelectionName="Get Files" DefaultPause="0" LineNumber="4" PauseBeforeExeucution="false" CommandEnabled="true" v_SourceFolderPath="⦃vUnpFloder⦄" v_SearchFileName="TAXINVOICE" v_SearchMethod="Starts with" v_SearchExtension="pdf" v_UserVariableName="vListOfFiles" />
+      </AdditionalScriptCommands>
+      <AdditionalScriptCommands>
+        <ScriptCommand xsi:type="GetListCountCommand" CommandID="7b17be64-4536-4831-9923-e6909a02bb25" CommandName="GetListCountCommand" IsCommented="false" SelectionName="Get List Count" DefaultPause="0" LineNumber="5" PauseBeforeExeucution="false" CommandEnabled="true" v_ListName="vListOfFiles" v_UserVariableName="listFilesCount" />
+      </AdditionalScriptCommands>
+      <AdditionalScriptCommands>
+        <ScriptCommand xsi:type="BeginIfCommand" CommandID="2105331b-3ba4-4a91-9bb4-3a17de600209" CommandName="BeginIfCommand" IsCommented="false" SelectionName="Begin If" DefaultPause="0" LineNumber="6" PauseBeforeExeucution="false" CommandEnabled="true" v_IfActionType="Numeric Compare">
+          <v_IfActionParameterTable>
+            <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+              <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="I8AcPionPara55Table020523.105519" msdata:UseCurrentLocale="true">
+                <xs:complexType>
+                  <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element name="I8AcPionPara55Table020523.105519">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Parameter_x0020_Name" type="xs:string" minOccurs="0" />
+                          <xs:element name="Parameter_x0020_Value" type="xs:string" minOccurs="0" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:choice>
+                </xs:complexType>
+              </xs:element>
+            </xs:schema>
+            <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+              <DocumentElement>
+                <I8AcPionPara55Table020523.105519 diffgr:id="I8AcPionPara55Table020523.1055191" msdata:rowOrder="0" diffgr:hasChanges="modified">
+                  <Parameter_x0020_Name>Value1</Parameter_x0020_Name>
+                  <Parameter_x0020_Value>⦃listFilesCount⦄</Parameter_x0020_Value>
+                </I8AcPionPara55Table020523.105519>
+                <I8AcPionPara55Table020523.105519 diffgr:id="I8AcPionPara55Table020523.1055192" msdata:rowOrder="1" diffgr:hasChanges="modified">
+                  <Parameter_x0020_Name>Operand</Parameter_x0020_Name>
+                  <Parameter_x0020_Value>is greater than</Parameter_x0020_Value>
+                </I8AcPionPara55Table020523.105519>
+                <I8AcPionPara55Table020523.105519 diffgr:id="I8AcPionPara55Table020523.1055193" msdata:rowOrder="2" diffgr:hasChanges="modified">
+                  <Parameter_x0020_Name>Value2</Parameter_x0020_Name>
+                  <Parameter_x0020_Value>0</Parameter_x0020_Value>
+                </I8AcPionPara55Table020523.105519>
+              </DocumentElement>
+              <diffgr:before>
+                <I8AcPionPara55Table020523.105519 diffgr:id="I8AcPionPara55Table020523.1055191" msdata:rowOrder="0">
+                  <Parameter_x0020_Name>Value1</Parameter_x0020_Name>
+                  <Parameter_x0020_Value>{listFilesCount}</Parameter_x0020_Value>
+                </I8AcPionPara55Table020523.105519>
+                <I8AcPionPara55Table020523.105519 diffgr:id="I8AcPionPara55Table020523.1055192" msdata:rowOrder="1">
+                  <Parameter_x0020_Name>Operand</Parameter_x0020_Name>
+                  <Parameter_x0020_Value>is greater than</Parameter_x0020_Value>
+                </I8AcPionPara55Table020523.105519>
+                <I8AcPionPara55Table020523.105519 diffgr:id="I8AcPionPara55Table020523.1055193" msdata:rowOrder="2">
+                  <Parameter_x0020_Name>Value2</Parameter_x0020_Name>
+                  <Parameter_x0020_Value>0</Parameter_x0020_Value>
+                </I8AcPionPara55Table020523.105519>
+              </diffgr:before>
+            </diffgr:diffgram>
+          </v_IfActionParameterTable>
+        </ScriptCommand>
+        <AdditionalScriptCommands>
+          <ScriptCommand xsi:type="BeginListLoopCommand" CommandID="cc7861b9-3ae1-40f7-9fe8-af03a699b175" CommandName="BeginListLoopCommand" IsCommented="false" SelectionName="Loop List" DefaultPause="0" LineNumber="7" PauseBeforeExeucution="false" CommandEnabled="true" v_LoopParameter="⦃vListOfFiles⦄" />
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="GetListItemCommand" CommandID="c52ad1fe-f8b2-4acb-9cbc-600ff9204dbd" CommandName="GetListItemCommand" IsCommented="false" SelectionName="Get List Item" DefaultPause="0" LineNumber="8" PauseBeforeExeucution="false" CommandEnabled="true" v_ListName="vListOfFiles" v_ItemIndex="⦃Loop.CurrentIndex⦄-1" v_UserVariableName="oFileName" />
+          </AdditionalScriptCommands>
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="FormatFilePathCommnad" CommandID="6af87251-49cc-4ec2-a94a-aac2ba35be85" CommandName="Format File PathCommand" IsCommented="false" SelectionName="Format File Path" DefaultPause="0" LineNumber="9" PauseBeforeExeucution="false" CommandEnabled="true" v_SourceFilePath="⦃oFileName⦄" v_Format="FileName" v_Result="vPodFileName" />
+          </AdditionalScriptCommands>
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="FormatFilePathCommnad" CommandID="6af87251-49cc-4ec2-a94a-aac2ba35be85" CommandName="Format File PathCommand" IsCommented="false" SelectionName="Format File Path" DefaultPause="0" LineNumber="10" PauseBeforeExeucution="false" CommandEnabled="true" v_SourceFilePath="⦃oFileName⦄" v_Format="FileNameWithoutExtension" v_Result="voutFileName" />
+          </AdditionalScriptCommands>
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="CheckFolderExistsCommand" CommandID="8ca89b11-08a0-4f24-bfb8-0680ae70883f" CommandName="CheckFolderExistsCommand" IsCommented="false" SelectionName="Check Folder Exists" DefaultPause="0" LineNumber="11" PauseBeforeExeucution="false" CommandEnabled="true" v_TargetFolderName="⦃vOutPutFldr⦄\⦃voutFileName|" v_UserVariableName="isOutPutFolderExists" />
+          </AdditionalScriptCommands>
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="BeginIfCommand" CommandID="a1ac7c81-2006-4797-9c65-be4da22d9c0c" CommandName="BeginIfCommand" IsCommented="false" SelectionName="Begin If" DefaultPause="0" LineNumber="12" PauseBeforeExeucution="false" CommandEnabled="true" v_IfActionType="Boolean">
+              <v_IfActionParameterTable>
+                <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+                  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="I5AcPionPara52Table020523.045239" msdata:UseCurrentLocale="true">
+                    <xs:complexType>
+                      <xs:choice minOccurs="0" maxOccurs="unbounded">
+                        <xs:element name="I5AcPionPara52Table020523.045239">
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element name="Parameter_x0020_Name" type="xs:string" minOccurs="0" />
+                              <xs:element name="Parameter_x0020_Value" type="xs:string" minOccurs="0" />
+                            </xs:sequence>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:choice>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:schema>
+                <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+                  <DocumentElement>
+                    <I5AcPionPara52Table020523.045239 diffgr:id="I5AcPionPara52Table020523.0452391" msdata:rowOrder="0" diffgr:hasChanges="modified">
+                      <Parameter_x0020_Name>Variable Name</Parameter_x0020_Name>
+                      <Parameter_x0020_Value>⦃isOutPutFolderExists⦄</Parameter_x0020_Value>
+                    </I5AcPionPara52Table020523.045239>
+                    <I5AcPionPara52Table020523.045239 diffgr:id="I5AcPionPara52Table020523.0452392" msdata:rowOrder="1" diffgr:hasChanges="modified">
+                      <Parameter_x0020_Name>Value Is</Parameter_x0020_Name>
+                      <Parameter_x0020_Value>False</Parameter_x0020_Value>
+                    </I5AcPionPara52Table020523.045239>
+                  </DocumentElement>
+                  <diffgr:before>
+                    <I5AcPionPara52Table020523.045239 diffgr:id="I5AcPionPara52Table020523.0452391" msdata:rowOrder="0">
+                      <Parameter_x0020_Name>Variable Name</Parameter_x0020_Name>
+                      <Parameter_x0020_Value>{isOutPutFolderExists}</Parameter_x0020_Value>
+                    </I5AcPionPara52Table020523.045239>
+                    <I5AcPionPara52Table020523.045239 diffgr:id="I5AcPionPara52Table020523.0452392" msdata:rowOrder="1">
+                      <Parameter_x0020_Name>Value Is</Parameter_x0020_Name>
+                      <Parameter_x0020_Value>False</Parameter_x0020_Value>
+                    </I5AcPionPara52Table020523.045239>
+                  </diffgr:before>
+                </diffgr:diffgram>
+              </v_IfActionParameterTable>
+            </ScriptCommand>
+            <AdditionalScriptCommands>
+              <ScriptCommand xsi:type="CommentCommand" CommandID="9a021a81-cc0b-43a0-ba3a-b31a1c184994" CommandName="CommentCommand" IsCommented="false" SelectionName="Add Code Comment" DefaultPause="0" LineNumber="13" PauseBeforeExeucution="false" v_Comment="Items in this section will run if the statement is true" CommandEnabled="true" />
+            </AdditionalScriptCommands>
+            <AdditionalScriptCommands>
+              <ScriptCommand xsi:type="CreateFolderCommand" CommandID="4b53bd27-c7b6-418b-8fa1-c96fef09e3d1" CommandName="CreateFolderCommand" IsCommented="false" SelectionName="Create Folder" DefaultPause="0" LineNumber="14" PauseBeforeExeucution="false" CommandEnabled="true" v_NewFolderName="⦃voutFileName⦄" v_DestinationDirectory="⦃vOutPutFldr⦄" v_DeleteExisting="No" />
+            </AdditionalScriptCommands>
+            <AdditionalScriptCommands>
+              <ScriptCommand xsi:type="VariableCommand" CommandID="9519f1b8-0a08-4492-97de-ca2349033fe6" CommandName="VariableCommand" IsCommented="false" SelectionName="Set Variable" DefaultPause="0" LineNumber="15" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="vFoutPutFldr" v_Input="⦃vOutPutFldr⦄\⦃voutFileName⦄" v_ReplaceInputVariables="Yes" />
+            </AdditionalScriptCommands>
+            <AdditionalScriptCommands>
+              <ScriptCommand xsi:type="EndIfCommand" CommandID="bb8a060f-61ef-4fc3-8222-b99a2a5918b3" CommandName="EndIfCommand" IsCommented="false" SelectionName="End If" DefaultPause="0" LineNumber="16" PauseBeforeExeucution="false" CommandEnabled="true" />
+            </AdditionalScriptCommands>
+          </AdditionalScriptCommands>
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="VariableCommand" CommandID="50538bf1-fe6f-4f6e-a7b1-c6e8844f3181" CommandName="VariableCommand" IsCommented="false" SelectionName="Set Variable" DefaultPause="0" LineNumber="17" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="voutFileName" v_Input="⦃vUnpFloder⦄\⦃voutFileName⦄.txt" v_ReplaceInputVariables="Yes" />
+          </AdditionalScriptCommands>
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="GetPDFImagesCommand" CommandID="b2a9099f-d960-4554-a205-68fea82e2191" CommandName="GetPDFImagesCommand" IsCommented="false" SelectionName="Get PDF Images" DefaultPause="0" LineNumber="18" PauseBeforeExeucution="false" CommandEnabled="true" v_FilePath="⦃oFileName⦄" v_TargetFolderName="⦃vUnpFloder⦄" v_TextFileName="1" v_applyToVariableName="vPdf" />
+          </AdditionalScriptCommands>
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="ReadTextFileCommand" CommandID="139ae531-9d63-4285-b0de-96ad738eba5b" CommandName="ReadTextFileCommand" IsCommented="false" SelectionName="Read Text File" DefaultPause="0" LineNumber="19" PauseBeforeExeucution="false" CommandEnabled="true" v_FilePath="⦃voutFileName⦄" v_ReadOption="Content" v_userVariableName="vTextFile" />
+          </AdditionalScriptCommands>
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="SplitTextCommand" CommandID="8344d2a6-23bf-43dd-b793-5c4a31789d6a" CommandName="SplitTextCommand" IsCommented="false" SelectionName="Split Text" DefaultPause="0" LineNumber="20" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="⦃vTextFile⦄" v_splitCharacter="[crLF]" v_applyConvertToUserVariableName="myDataList" />
+          </AdditionalScriptCommands>
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="GetListCountCommand" CommandID="792adcb2-a37f-4602-b408-8f5885766daf" CommandName="GetListCountCommand" IsCommented="false" SelectionName="Get List Count" DefaultPause="0" LineNumber="21" PauseBeforeExeucution="false" CommandEnabled="true" v_ListName="myDataList" v_UserVariableName="ListCount" />
+          </AdditionalScriptCommands>
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="CreateDataTableCommand" CommandID="14eadd82-7d47-46c4-800a-f39d83d9f979" CommandName="CreateDataTableCommand" IsCommented="false" SelectionName="Create DataTable" DefaultPause="0" LineNumber="22" PauseBeforeExeucution="false" CommandEnabled="true" v_DataTableName="invDataTable">
+              <v_ColumnNameDataTable>
+                <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+                  <xs:element name="ColumnNameDataTable020123.092751">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="Column_x0020_Name" type="xs:string" minOccurs="0" />
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ColumnNameDataTable020123.092751" msdata:UseCurrentLocale="true">
+                    <xs:complexType>
+                      <xs:choice minOccurs="0" maxOccurs="unbounded">
+                        <xs:element ref="ColumnNameDataTable020123.092751" />
+                      </xs:choice>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:schema>
+                <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+                  <DocumentElement>
+                    <ColumnNameDataTable020123.092751 diffgr:id="ColumnNameDataTable020123.0927511" msdata:rowOrder="0" diffgr:hasChanges="modified">
+                      <Column_x0020_Name>Tax Invoice No</Column_x0020_Name>
+                    </ColumnNameDataTable020123.092751>
+                    <ColumnNameDataTable020123.092751 diffgr:id="ColumnNameDataTable020123.0927512" msdata:rowOrder="1" diffgr:hasChanges="modified">
+                      <Column_x0020_Name>Start Page No</Column_x0020_Name>
+                    </ColumnNameDataTable020123.092751>
+                    <ColumnNameDataTable020123.092751 diffgr:id="ColumnNameDataTable020123.0927513" msdata:rowOrder="2" diffgr:hasChanges="modified">
+                      <Column_x0020_Name>End Page No</Column_x0020_Name>
+                    </ColumnNameDataTable020123.092751>
+                    <ColumnNameDataTable020123.092751 diffgr:id="ColumnNameDataTable020123.0927514" msdata:rowOrder="3" diffgr:hasChanges="modified">
+                      <Column_x0020_Name>Status</Column_x0020_Name>
+                    </ColumnNameDataTable020123.092751>
+                  </DocumentElement>
+                  <diffgr:before>
+                    <ColumnNameDataTable020123.092751 diffgr:id="ColumnNameDataTable020123.0927511" msdata:rowOrder="0">
+                      <Column_x0020_Name>Tax Invoice No</Column_x0020_Name>
+                    </ColumnNameDataTable020123.092751>
+                    <ColumnNameDataTable020123.092751 diffgr:id="ColumnNameDataTable020123.0927512" msdata:rowOrder="1">
+                      <Column_x0020_Name>Start Page No</Column_x0020_Name>
+                    </ColumnNameDataTable020123.092751>
+                    <ColumnNameDataTable020123.092751 diffgr:id="ColumnNameDataTable020123.0927513" msdata:rowOrder="2">
+                      <Column_x0020_Name>End Page No</Column_x0020_Name>
+                    </ColumnNameDataTable020123.092751>
+                    <ColumnNameDataTable020123.092751 diffgr:id="ColumnNameDataTable020123.0927514" msdata:rowOrder="3">
+                      <Column_x0020_Name>Status</Column_x0020_Name>
+                    </ColumnNameDataTable020123.092751>
+                  </diffgr:before>
+                </diffgr:diffgram>
+              </v_ColumnNameDataTable>
+            </ScriptCommand>
+          </AdditionalScriptCommands>
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="CreateNumberVariableCommand" CommandID="c96a1777-58fc-498c-839e-627540093b91" CommandName="CreateNumberVariableCommand" IsCommented="false" SelectionName="Create Number Variable" DefaultPause="0" LineNumber="23" PauseBeforeExeucution="false" CommandEnabled="true" v_VariableName="startpageno" v_NumberValue="0" />
+          </AdditionalScriptCommands>
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="CreateNumberVariableCommand" CommandID="090fd1ec-9c66-47b2-9d8a-4be91e5f0ebf" CommandName="CreateNumberVariableCommand" IsCommented="false" SelectionName="Create Number Variable" DefaultPause="0" LineNumber="24" PauseBeforeExeucution="false" CommandEnabled="true" v_VariableName="endpageno" v_NumberValue="1" />
+          </AdditionalScriptCommands>
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="VariableCommand" CommandID="5db4658d-c4e2-4c7c-9471-753c2e220fc7" CommandName="VariableCommand" IsCommented="false" SelectionName="Set Variable" DefaultPause="0" LineNumber="25" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="txinvno" v_Input="0" v_ReplaceInputVariables="Yes" />
+          </AdditionalScriptCommands>
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="VariableCommand" CommandID="6e1c188d-8868-4a2a-878e-d9c3c9878125" CommandName="VariableCommand" IsCommented="false" SelectionName="Set Variable" DefaultPause="0" LineNumber="26" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="lastrefno" v_Input="0" v_ReplaceInputVariables="Yes" />
+          </AdditionalScriptCommands>
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="BeginListLoopCommand" CommandID="94485626-f619-4964-b4d0-a72f7b90d666" CommandName="BeginListLoopCommand" IsCommented="false" SelectionName="Loop List" DefaultPause="0" LineNumber="27" PauseBeforeExeucution="false" CommandEnabled="true" v_LoopParameter="⦃myDataList⦄" />
+            <AdditionalScriptCommands>
+              <ScriptCommand xsi:type="CommentCommand" CommandID="7653b68b-5243-4f95-ade2-1b56254795e1" CommandName="CommentCommand" IsCommented="false" SelectionName="Add Code Comment" DefaultPause="0" LineNumber="28" PauseBeforeExeucution="false" v_Comment="Items in this section will run within the loop" CommandEnabled="true" />
+            </AdditionalScriptCommands>
+            <AdditionalScriptCommands>
+              <ScriptCommand xsi:type="GetListItemCommand" CommandID="9f3fa001-4577-43ef-9cea-a0c456a0accf" CommandName="GetListItemCommand" IsCommented="false" SelectionName="Get List Item" DefaultPause="0" LineNumber="29" PauseBeforeExeucution="false" CommandEnabled="true" v_ListName="myDataList" v_ItemIndex="⦃Loop.CurrentIndex⦄-1" v_UserVariableName="lineRslt" />
+            </AdditionalScriptCommands>
+            <AdditionalScriptCommands>
+              <ScriptCommand xsi:type="ReplaceTextCommand" CommandID="542d76da-1819-4503-84ee-e4175ee68f52" CommandName="ReplaceTextCommand" IsCommented="false" SelectionName="Replace Text" DefaultPause="0" LineNumber="30" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="⦃lineRslt⦄" v_replacementText="|" v_applyToVariableName="lineRslt" />
+            </AdditionalScriptCommands>
+            <AdditionalScriptCommands>
+              <ScriptCommand xsi:type="ReplaceTextCommand" CommandID="542d76da-1819-4503-84ee-e4175ee68f52" CommandName="ReplaceTextCommand" IsCommented="false" SelectionName="Replace Text" DefaultPause="0" LineNumber="31" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="⦃lineRslt⦄" v_replacementText="_" v_applyToVariableName="lineRslt" />
+            </AdditionalScriptCommands>
+            <AdditionalScriptCommands>
+              <ScriptCommand xsi:type="ReplaceTextCommand" CommandID="542d76da-1819-4503-84ee-e4175ee68f52" CommandName="ReplaceTextCommand" IsCommented="false" SelectionName="Replace Text" DefaultPause="0" LineNumber="32" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="⦃lineRslt⦄" v_replacementText="." v_applyToVariableName="lineRslt" />
+            </AdditionalScriptCommands>
+            <AdditionalScriptCommands>
+              <ScriptCommand xsi:type="CheckTextCommand" CommandID="813d7fc5-22d8-4709-9873-4421f352d7a7" CommandName="CheckTextCommand" IsCommented="false" SelectionName="Check Text" DefaultPause="0" LineNumber="33" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="⦃lineRslt⦄" v_CheckMethod="Index of" v_CheckParameter="Tax Invoice No" v_CaseSensitive="No" v_applyToVariableName="vIndex" />
+            </AdditionalScriptCommands>
+            <AdditionalScriptCommands>
+              <ScriptCommand xsi:type="BeginIfCommand" CommandID="b1e0a80f-74d0-4f32-9204-fd798ad59a1f" CommandName="BeginIfCommand" IsCommented="false" SelectionName="Begin If" DefaultPause="0" LineNumber="34" PauseBeforeExeucution="false" CommandEnabled="true" v_IfActionType="Numeric Compare">
+                <v_IfActionParameterTable>
+                  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+                    <xs:element name="I7AcAionPara21Table020123.092122">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Parameter_x0020_Name" type="xs:string" minOccurs="0" />
+                          <xs:element name="Parameter_x0020_Value" type="xs:string" minOccurs="0" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="I7AcAionPara21Table020123.092122" msdata:UseCurrentLocale="true">
+                      <xs:complexType>
+                        <xs:choice minOccurs="0" maxOccurs="unbounded">
+                          <xs:element ref="I7AcAionPara21Table020123.092122" />
+                        </xs:choice>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:schema>
+                  <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+                    <DocumentElement>
+                      <I7AcAionPara21Table020123.092122 diffgr:id="I7AcAionPara21Table020123.0921221" msdata:rowOrder="0" diffgr:hasChanges="modified">
+                        <Parameter_x0020_Name>Value1</Parameter_x0020_Name>
+                        <Parameter_x0020_Value>⦃vIndex⦄</Parameter_x0020_Value>
+                      </I7AcAionPara21Table020123.092122>
+                      <I7AcAionPara21Table020123.092122 diffgr:id="I7AcAionPara21Table020123.0921222" msdata:rowOrder="1" diffgr:hasChanges="modified">
+                        <Parameter_x0020_Name>Operand</Parameter_x0020_Name>
+                        <Parameter_x0020_Value>is greater than</Parameter_x0020_Value>
+                      </I7AcAionPara21Table020123.092122>
+                      <I7AcAionPara21Table020123.092122 diffgr:id="I7AcAionPara21Table020123.0921223" msdata:rowOrder="2" diffgr:hasChanges="modified">
+                        <Parameter_x0020_Name>Value2</Parameter_x0020_Name>
+                        <Parameter_x0020_Value>0</Parameter_x0020_Value>
+                      </I7AcAionPara21Table020123.092122>
+                    </DocumentElement>
+                    <diffgr:before>
+                      <I7AcAionPara21Table020123.092122 diffgr:id="I7AcAionPara21Table020123.0921221" msdata:rowOrder="0">
+                        <Parameter_x0020_Name>Value1</Parameter_x0020_Name>
+                        <Parameter_x0020_Value>{vIndex}</Parameter_x0020_Value>
+                      </I7AcAionPara21Table020123.092122>
+                      <I7AcAionPara21Table020123.092122 diffgr:id="I7AcAionPara21Table020123.0921222" msdata:rowOrder="1">
+                        <Parameter_x0020_Name>Operand</Parameter_x0020_Name>
+                        <Parameter_x0020_Value>is greater than</Parameter_x0020_Value>
+                      </I7AcAionPara21Table020123.092122>
+                      <I7AcAionPara21Table020123.092122 diffgr:id="I7AcAionPara21Table020123.0921223" msdata:rowOrder="2">
+                        <Parameter_x0020_Name>Value2</Parameter_x0020_Name>
+                        <Parameter_x0020_Value>0</Parameter_x0020_Value>
+                      </I7AcAionPara21Table020123.092122>
+                    </diffgr:before>
+                  </diffgr:diffgram>
+                </v_IfActionParameterTable>
+              </ScriptCommand>
+              <AdditionalScriptCommands>
+                <ScriptCommand xsi:type="CommentCommand" CommandID="80651391-c5ea-4fde-8115-fb75d1157ea6" CommandName="CommentCommand" IsCommented="false" SelectionName="Add Code Comment" DefaultPause="0" LineNumber="35" PauseBeforeExeucution="false" v_Comment="Items in this section will run if the statement is true" CommandEnabled="true" />
+              </AdditionalScriptCommands>
+              <AdditionalScriptCommands>
+                <ScriptCommand xsi:type="SubstringTextCommand" CommandID="c97951dc-0fde-4e2e-9681-82c96c8e5007" CommandName="SubstringTextCommand" IsCommented="false" SelectionName="Substring Text" DefaultPause="0" LineNumber="36" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="⦃lineRslt⦄" v_startIndex="⦃vIndex⦄+14" v_stringLength="11" v_applyToVariableName="txinvno" />
+              </AdditionalScriptCommands>
+              <AdditionalScriptCommands>
+                <ScriptCommand xsi:type="CheckTextCommand" CommandID="5f64d4aa-a65b-452b-9870-c94b6c301592" CommandName="CheckTextCommand" IsCommented="false" SelectionName="Check Text" DefaultPause="0" LineNumber="37" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="⦃txinvno⦄" v_CheckMethod="Contains" v_CheckParameter="\n" v_CaseSensitive="No" v_applyToVariableName="vPrngIndx" />
+              </AdditionalScriptCommands>
+              <AdditionalScriptCommands>
+                <ScriptCommand xsi:type="CheckTextCommand" CommandID="9813152b-5569-43ae-a8b0-6b98fd353923" CommandName="CheckTextCommand" IsCommented="false" SelectionName="Check Text" DefaultPause="0" LineNumber="38" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="⦃txinvno⦄" v_CheckMethod="Index of" v_CheckParameter="⦃Char.Lf⦄" v_CaseSensitive="No" v_applyToVariableName="vPrngIndx" />
+              </AdditionalScriptCommands>
+              <AdditionalScriptCommands>
+                <ScriptCommand xsi:type="BeginIfCommand" CommandID="a5165533-618d-48d4-bad5-503e895c1651" CommandName="BeginIfCommand" IsCommented="false" SelectionName="Begin If" DefaultPause="0" LineNumber="39" PauseBeforeExeucution="false" CommandEnabled="true" v_IfActionType="Numeric Compare">
+                  <v_IfActionParameterTable>
+                    <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+                      <xs:element name="I5AcAionPara51Table020423.105120">
+                        <xs:complexType>
+                          <xs:sequence>
+                            <xs:element name="Parameter_x0020_Name" type="xs:string" minOccurs="0" />
+                            <xs:element name="Parameter_x0020_Value" type="xs:string" minOccurs="0" />
+                          </xs:sequence>
+                        </xs:complexType>
+                      </xs:element>
+                      <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="I5AcAionPara51Table020423.105120" msdata:UseCurrentLocale="true">
+                        <xs:complexType>
+                          <xs:choice minOccurs="0" maxOccurs="unbounded">
+                            <xs:element ref="I5AcAionPara51Table020423.105120" />
+                          </xs:choice>
+                        </xs:complexType>
+                      </xs:element>
+                    </xs:schema>
+                    <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+                      <DocumentElement>
+                        <I5AcAionPara51Table020423.105120 diffgr:id="I5AcAionPara51Table020423.1051201" msdata:rowOrder="0" diffgr:hasChanges="modified">
+                          <Parameter_x0020_Name>Value1</Parameter_x0020_Name>
+                          <Parameter_x0020_Value>⦃vPrngIndx⦄</Parameter_x0020_Value>
+                        </I5AcAionPara51Table020423.105120>
+                        <I5AcAionPara51Table020423.105120 diffgr:id="I5AcAionPara51Table020423.1051202" msdata:rowOrder="1" diffgr:hasChanges="modified">
+                          <Parameter_x0020_Name>Operand</Parameter_x0020_Name>
+                          <Parameter_x0020_Value>is equal to</Parameter_x0020_Value>
+                        </I5AcAionPara51Table020423.105120>
+                        <I5AcAionPara51Table020423.105120 diffgr:id="I5AcAionPara51Table020423.1051203" msdata:rowOrder="2" diffgr:hasChanges="modified">
+                          <Parameter_x0020_Name>Value2</Parameter_x0020_Name>
+                          <Parameter_x0020_Value>-1</Parameter_x0020_Value>
+                        </I5AcAionPara51Table020423.105120>
+                      </DocumentElement>
+                      <diffgr:before>
+                        <I5AcAionPara51Table020423.105120 diffgr:id="I5AcAionPara51Table020423.1051201" msdata:rowOrder="0">
+                          <Parameter_x0020_Name>Value1</Parameter_x0020_Name>
+                          <Parameter_x0020_Value>{vPrngIndx}</Parameter_x0020_Value>
+                        </I5AcAionPara51Table020423.105120>
+                        <I5AcAionPara51Table020423.105120 diffgr:id="I5AcAionPara51Table020423.1051202" msdata:rowOrder="1">
+                          <Parameter_x0020_Name>Operand</Parameter_x0020_Name>
+                          <Parameter_x0020_Value>is equal to</Parameter_x0020_Value>
+                        </I5AcAionPara51Table020423.105120>
+                        <I5AcAionPara51Table020423.105120 diffgr:id="I5AcAionPara51Table020423.1051203" msdata:rowOrder="2">
+                          <Parameter_x0020_Name>Value2</Parameter_x0020_Name>
+                          <Parameter_x0020_Value>-1</Parameter_x0020_Value>
+                        </I5AcAionPara51Table020423.105120>
+                      </diffgr:before>
+                    </diffgr:diffgram>
+                  </v_IfActionParameterTable>
+                </ScriptCommand>
+                <AdditionalScriptCommands>
+                  <ScriptCommand xsi:type="CommentCommand" CommandID="60f396b3-c952-47b8-bc80-e47bd1fb477a" CommandName="CommentCommand" IsCommented="false" SelectionName="Add Code Comment" DefaultPause="0" LineNumber="40" PauseBeforeExeucution="false" v_Comment="Items in this section will run if the statement is true" CommandEnabled="true" />
+                </AdditionalScriptCommands>
+                <AdditionalScriptCommands>
+                  <ScriptCommand xsi:type="SubstringTextCommand" CommandID="c97951dc-0fde-4e2e-9681-82c96c8e5007" CommandName="SubstringTextCommand" IsCommented="false" SelectionName="Substring Text" DefaultPause="0" LineNumber="41" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="⦃txinvno⦄" v_startIndex="1" v_stringLength="" v_applyToVariableName="txinvno" />
+                </AdditionalScriptCommands>
+                <AdditionalScriptCommands>
+                  <ScriptCommand xsi:type="ElseCommand" CommandID="8e4aca53-0489-41aa-8563-22d3d8fa7b86" CommandName="ElseCommand" IsCommented="false" SelectionName="Else" DefaultPause="0" LineNumber="42" PauseBeforeExeucution="false" CommandEnabled="true" />
+                </AdditionalScriptCommands>
+                <AdditionalScriptCommands>
+                  <ScriptCommand xsi:type="SubstringTextCommand" CommandID="52f2ad0b-94dc-4fb0-b3e8-45d6dfb0f54e" CommandName="SubstringTextCommand" IsCommented="false" SelectionName="Substring Text" DefaultPause="0" LineNumber="43" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="⦃txinvno⦄" v_startIndex="1" v_stringLength="⦃vPrngIndx⦄-1" v_applyToVariableName="txinvno" />
+                </AdditionalScriptCommands>
+                <AdditionalScriptCommands>
+                  <ScriptCommand xsi:type="EndIfCommand" CommandID="3c5001c8-f1d2-46ff-8f8d-da8a542da5d9" CommandName="EndIfCommand" IsCommented="false" SelectionName="End If" DefaultPause="0" LineNumber="44" PauseBeforeExeucution="false" CommandEnabled="true" />
+                </AdditionalScriptCommands>
+              </AdditionalScriptCommands>
+              <AdditionalScriptCommands>
+                <ScriptCommand xsi:type="ReplaceTextCommand" CommandID="a6ac9aa6-d2ba-48c4-8f22-78d4f68788c9" CommandName="ReplaceTextCommand" IsCommented="false" SelectionName="Replace Text" DefaultPause="0" LineNumber="45" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="⦃txinvno⦄" v_replacementText="\r&#xD;&#xA;" v_applyToVariableName="txinvno" />
+              </AdditionalScriptCommands>
+              <AdditionalScriptCommands>
+                <ScriptCommand xsi:type="ReplaceTextCommand" CommandID="a6ac9aa6-d2ba-48c4-8f22-78d4f68788c9" CommandName="ReplaceTextCommand" IsCommented="false" SelectionName="Replace Text" DefaultPause="0" LineNumber="46" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="⦃txinvno⦄" v_replacementText="\n&#xD;&#xA;" v_applyToVariableName="txinvno" />
+              </AdditionalScriptCommands>
+              <AdditionalScriptCommands>
+                <ScriptCommand xsi:type="ReplaceTextCommand" CommandID="a6ac9aa6-d2ba-48c4-8f22-78d4f68788c9" CommandName="ReplaceTextCommand" IsCommented="false" SelectionName="Replace Text" DefaultPause="0" LineNumber="47" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="⦃txinvno⦄" v_replacementText="⦃Char.Lf⦄&#xD;&#xA;" v_applyToVariableName="txinvno" />
+              </AdditionalScriptCommands>
+              <AdditionalScriptCommands>
+                <ScriptCommand xsi:type="IncreaseNumericalVariableCommand" CommandID="e48ca440-5fef-4256-8ebf-7786486929af" CommandName="IncreaseNumericalVariableCommand" IsCommented="false" SelectionName="Increase Numerical Variable" DefaultPause="0" LineNumber="48" PauseBeforeExeucution="false" CommandEnabled="true" v_VariableName="vStartPageNo" v_Value="" />
+              </AdditionalScriptCommands>
+              <AdditionalScriptCommands>
+                <ScriptCommand xsi:type="BeginIfCommand" CommandID="bf3f9f6e-2a26-40ea-9cb9-c7204dbaf9c7" CommandName="BeginIfCommand" IsCommented="false" SelectionName="Begin If" DefaultPause="0" LineNumber="49" PauseBeforeExeucution="false" CommandEnabled="true" v_IfActionType="Numeric Compare">
+                  <v_IfActionParameterTable>
+                    <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+                      <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="I8AcAionPara4Table020323.090426" msdata:UseCurrentLocale="true">
+                        <xs:complexType>
+                          <xs:choice minOccurs="0" maxOccurs="unbounded">
+                            <xs:element name="I8AcAionPara4Table020323.090426">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="Parameter_x0020_Name" type="xs:string" minOccurs="0" />
+                                  <xs:element name="Parameter_x0020_Value" type="xs:string" minOccurs="0" />
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                          </xs:choice>
+                        </xs:complexType>
+                      </xs:element>
+                    </xs:schema>
+                    <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+                      <DocumentElement>
+                        <I8AcAionPara4Table020323.090426 diffgr:id="I8AcAionPara4Table020323.0904261" msdata:rowOrder="0" diffgr:hasChanges="modified">
+                          <Parameter_x0020_Name>Value1</Parameter_x0020_Name>
+                          <Parameter_x0020_Value>⦃lastrefno⦄</Parameter_x0020_Value>
+                        </I8AcAionPara4Table020323.090426>
+                        <I8AcAionPara4Table020323.090426 diffgr:id="I8AcAionPara4Table020323.0904262" msdata:rowOrder="1" diffgr:hasChanges="modified">
+                          <Parameter_x0020_Name>Operand</Parameter_x0020_Name>
+                          <Parameter_x0020_Value>is equal to</Parameter_x0020_Value>
+                        </I8AcAionPara4Table020323.090426>
+                        <I8AcAionPara4Table020323.090426 diffgr:id="I8AcAionPara4Table020323.0904263" msdata:rowOrder="2" diffgr:hasChanges="modified">
+                          <Parameter_x0020_Name>Value2</Parameter_x0020_Name>
+                          <Parameter_x0020_Value>0</Parameter_x0020_Value>
+                        </I8AcAionPara4Table020323.090426>
+                      </DocumentElement>
+                      <diffgr:before>
+                        <I8AcAionPara4Table020323.090426 diffgr:id="I8AcAionPara4Table020323.0904261" msdata:rowOrder="0">
+                          <Parameter_x0020_Name>Value1</Parameter_x0020_Name>
+                          <Parameter_x0020_Value>{lastrefno}</Parameter_x0020_Value>
+                        </I8AcAionPara4Table020323.090426>
+                        <I8AcAionPara4Table020323.090426 diffgr:id="I8AcAionPara4Table020323.0904262" msdata:rowOrder="1">
+                          <Parameter_x0020_Name>Operand</Parameter_x0020_Name>
+                          <Parameter_x0020_Value>is equal to</Parameter_x0020_Value>
+                        </I8AcAionPara4Table020323.090426>
+                        <I8AcAionPara4Table020323.090426 diffgr:id="I8AcAionPara4Table020323.0904263" msdata:rowOrder="2">
+                          <Parameter_x0020_Name>Value2</Parameter_x0020_Name>
+                          <Parameter_x0020_Value>0</Parameter_x0020_Value>
+                        </I8AcAionPara4Table020323.090426>
+                      </diffgr:before>
+                    </diffgr:diffgram>
+                  </v_IfActionParameterTable>
+                </ScriptCommand>
+                <AdditionalScriptCommands>
+                  <ScriptCommand xsi:type="CommentCommand" CommandID="ebabc7b7-3afe-4051-abc7-29a9a150a3f6" CommandName="CommentCommand" IsCommented="false" SelectionName="Add Code Comment" DefaultPause="0" LineNumber="50" PauseBeforeExeucution="false" v_Comment="Items in this section will run if the statement is true" CommandEnabled="true" />
+                </AdditionalScriptCommands>
+                <AdditionalScriptCommands>
+                  <ScriptCommand xsi:type="VariableCommand" CommandID="48369e82-2bc8-45b6-9d18-86d27742c3d7" CommandName="VariableCommand" IsCommented="false" SelectionName="Set Variable" DefaultPause="0" LineNumber="51" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="vNextStartPgNo" v_Input="1" v_ReplaceInputVariables="Yes" />
+                </AdditionalScriptCommands>
+                <AdditionalScriptCommands>
+                  <ScriptCommand xsi:type="VariableCommand" CommandID="4303c898-ad63-44aa-884e-e93f1d449e2a" CommandName="VariableCommand" IsCommented="false" SelectionName="Set Variable" DefaultPause="0" LineNumber="52" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="lastrefno" v_Input="⦃txinvno⦄" v_ReplaceInputVariables="Yes" />
+                </AdditionalScriptCommands>
+                <AdditionalScriptCommands>
+                  <ScriptCommand xsi:type="EndIfCommand" CommandID="0ed2be2e-6247-4a5a-9214-33cc96e8cf8d" CommandName="EndIfCommand" IsCommented="false" SelectionName="End If" DefaultPause="0" LineNumber="53" PauseBeforeExeucution="false" CommandEnabled="true" />
+                </AdditionalScriptCommands>
+              </AdditionalScriptCommands>
+              <AdditionalScriptCommands>
+                <ScriptCommand xsi:type="BeginIfCommand" CommandID="2b0b37ce-d37b-49b9-a807-8d0f794ddda5" CommandName="BeginIfCommand" IsCommented="false" SelectionName="Begin If" DefaultPause="0" LineNumber="54" PauseBeforeExeucution="false" CommandEnabled="true" v_IfActionType="Text Compare">
+                  <v_IfActionParameterTable>
+                    <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+                      <xs:element name="I4AcAionPara40Table020223.084039">
+                        <xs:complexType>
+                          <xs:sequence>
+                            <xs:element name="Parameter_x0020_Name" type="xs:string" minOccurs="0" />
+                            <xs:element name="Parameter_x0020_Value" type="xs:string" minOccurs="0" />
+                          </xs:sequence>
+                        </xs:complexType>
+                      </xs:element>
+                      <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="I4AcAionPara40Table020223.084039" msdata:UseCurrentLocale="true">
+                        <xs:complexType>
+                          <xs:choice minOccurs="0" maxOccurs="unbounded">
+                            <xs:element ref="I4AcAionPara40Table020223.084039" />
+                          </xs:choice>
+                        </xs:complexType>
+                      </xs:element>
+                    </xs:schema>
+                    <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+                      <DocumentElement>
+                        <I4AcAionPara40Table020223.084039 diffgr:id="I4AcAionPara40Table020223.0840391" msdata:rowOrder="0" diffgr:hasChanges="modified">
+                          <Parameter_x0020_Name>Value1</Parameter_x0020_Name>
+                          <Parameter_x0020_Value>⦃txinvno⦄</Parameter_x0020_Value>
+                        </I4AcAionPara40Table020223.084039>
+                        <I4AcAionPara40Table020223.084039 diffgr:id="I4AcAionPara40Table020223.0840392" msdata:rowOrder="1" diffgr:hasChanges="modified">
+                          <Parameter_x0020_Name>Operand</Parameter_x0020_Name>
+                          <Parameter_x0020_Value>is not equal to</Parameter_x0020_Value>
+                        </I4AcAionPara40Table020223.084039>
+                        <I4AcAionPara40Table020223.084039 diffgr:id="I4AcAionPara40Table020223.0840393" msdata:rowOrder="2" diffgr:hasChanges="modified">
+                          <Parameter_x0020_Name>Value2</Parameter_x0020_Name>
+                          <Parameter_x0020_Value>⦃lastrefno⦄</Parameter_x0020_Value>
+                        </I4AcAionPara40Table020223.084039>
+                        <I4AcAionPara40Table020223.084039 diffgr:id="I4AcAionPara40Table020223.0840394" msdata:rowOrder="3" diffgr:hasChanges="modified">
+                          <Parameter_x0020_Name>Case Sensitive</Parameter_x0020_Name>
+                          <Parameter_x0020_Value>Yes</Parameter_x0020_Value>
+                        </I4AcAionPara40Table020223.084039>
+                      </DocumentElement>
+                      <diffgr:before>
+                        <I4AcAionPara40Table020223.084039 diffgr:id="I4AcAionPara40Table020223.0840391" msdata:rowOrder="0">
+                          <Parameter_x0020_Name>Value1</Parameter_x0020_Name>
+                          <Parameter_x0020_Value>{txinvno}</Parameter_x0020_Value>
+                        </I4AcAionPara40Table020223.084039>
+                        <I4AcAionPara40Table020223.084039 diffgr:id="I4AcAionPara40Table020223.0840392" msdata:rowOrder="1">
+                          <Parameter_x0020_Name>Operand</Parameter_x0020_Name>
+                          <Parameter_x0020_Value>is not equal to</Parameter_x0020_Value>
+                        </I4AcAionPara40Table020223.084039>
+                        <I4AcAionPara40Table020223.084039 diffgr:id="I4AcAionPara40Table020223.0840393" msdata:rowOrder="2">
+                          <Parameter_x0020_Name>Value2</Parameter_x0020_Name>
+                          <Parameter_x0020_Value>{lastrefno}</Parameter_x0020_Value>
+                        </I4AcAionPara40Table020223.084039>
+                        <I4AcAionPara40Table020223.084039 diffgr:id="I4AcAionPara40Table020223.0840394" msdata:rowOrder="3">
+                          <Parameter_x0020_Name>Case Sensitive</Parameter_x0020_Name>
+                          <Parameter_x0020_Value>Yes</Parameter_x0020_Value>
+                        </I4AcAionPara40Table020223.084039>
+                      </diffgr:before>
+                    </diffgr:diffgram>
+                  </v_IfActionParameterTable>
+                </ScriptCommand>
+                <AdditionalScriptCommands>
+                  <ScriptCommand xsi:type="CommentCommand" CommandID="7e1e4e9f-357c-4031-94d0-67aa19270c8a" CommandName="CommentCommand" IsCommented="true" SelectionName="Add Code Comment" DefaultPause="0" LineNumber="55" PauseBeforeExeucution="false" v_Comment="Items in this section will run if the statement is true" CommandEnabled="true" />
+                </AdditionalScriptCommands>
+                <AdditionalScriptCommands>
+                  <ScriptCommand xsi:type="VariableCommand" CommandID="6f87ed82-2161-4390-8391-81a28a2c2eae" CommandName="VariableCommand" IsCommented="false" SelectionName="Set Variable" DefaultPause="0" LineNumber="56" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="vEndPageNo" v_Input="⦃vStartPageNo⦄-1" v_ReplaceInputVariables="Yes" />
+                </AdditionalScriptCommands>
+                <AdditionalScriptCommands>
+                  <ScriptCommand xsi:type="ReplaceTextCommand" CommandID="2b5a160c-3bb8-4350-8c72-07e4e7e6da68" CommandName="ReplaceTextCommand" IsCommented="false" SelectionName="Replace Text" DefaultPause="0" LineNumber="57" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="⦃lastrefno⦄" v_replacementText="⦃Char.NewLine⦄" v_replacementValue="" v_applyToVariableName="⦃lastrefno⦄" />
+                </AdditionalScriptCommands>
+                <AdditionalScriptCommands>
+                  <ScriptCommand xsi:type="SplitPDFCommand" CommandID="904ce4ab-f627-4f90-a0df-17582b486bfa" CommandName="SplitPDFCommand" IsCommented="false" SelectionName="Split PDF" DefaultPause="0" LineNumber="58" PauseBeforeExeucution="false" CommandEnabled="true" v_FilePath="⦃oFileName⦄" v_startRange="⦃vNextStartPgNo⦄" v_endRange="⦃vEndPageNo⦄" v_TargetFolderName="⦃vFoutPutFldr⦄" v_pdfFileName="MH-⦃lastrefno⦄" v_applyToVariableName="vPdfText" />
+                </AdditionalScriptCommands>
+                <AdditionalScriptCommands>
+                  <ScriptCommand xsi:type="ErrorHandlingCommand" CommandID="a6fd758f-3832-411f-bb52-653f17a78730" CommandName="ErrorHandlingCommand" IsCommented="false" SelectionName="Error Handling" DefaultPause="0" LineNumber="59" PauseBeforeExeucution="false" CommandEnabled="true" v_ErrorHandlingAction="Continue Processing" />
+                </AdditionalScriptCommands>
+                <AdditionalScriptCommands>
+                  <ScriptCommand xsi:type="AddDataTableRowCommand" CommandID="68839438-ec64-4c79-a2e4-efe99135f856" CommandName="AddDataTableRowCommand" IsCommented="false" SelectionName="Add DataTable Row" DefaultPause="0" LineNumber="60" PauseBeforeExeucution="false" CommandEnabled="true" v_DataTableName="invDataTable">
+                    <v_AddDataDataTable>
+                      <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+                        <xs:element name="AddDataDataTable020123.093118">
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element name="Column_x0020_Name" type="xs:string" minOccurs="0" />
+                              <xs:element name="Data" type="xs:string" minOccurs="0" />
+                            </xs:sequence>
+                          </xs:complexType>
+                        </xs:element>
+                        <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="AddDataDataTable020123.093118" msdata:UseCurrentLocale="true">
+                          <xs:complexType>
+                            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                              <xs:element ref="AddDataDataTable020123.093118" />
+                            </xs:choice>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:schema>
+                      <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+                        <DocumentElement>
+                          <AddDataDataTable020123.093118 diffgr:id="AddDataDataTable020123.0931181" msdata:rowOrder="0" diffgr:hasChanges="modified">
+                            <Column_x0020_Name>Tax Invoice No</Column_x0020_Name>
+                            <Data>⦃lastrefno⦄</Data>
+                          </AddDataDataTable020123.093118>
+                          <AddDataDataTable020123.093118 diffgr:id="AddDataDataTable020123.0931182" msdata:rowOrder="1" diffgr:hasChanges="modified">
+                            <Column_x0020_Name>Start Page No</Column_x0020_Name>
+                            <Data>⦃vNextStartPgNo⦄</Data>
+                          </AddDataDataTable020123.093118>
+                          <AddDataDataTable020123.093118 diffgr:id="AddDataDataTable020123.0931183" msdata:rowOrder="2" diffgr:hasChanges="modified">
+                            <Column_x0020_Name>End Page No</Column_x0020_Name>
+                            <Data>⦃vEndPageNo⦄</Data>
+                          </AddDataDataTable020123.093118>
+                          <AddDataDataTable020123.093118 diffgr:id="AddDataDataTable020123.0931184" msdata:rowOrder="3" diffgr:hasChanges="modified">
+                            <Column_x0020_Name>Status</Column_x0020_Name>
+                            <Data>P</Data>
+                          </AddDataDataTable020123.093118>
+                        </DocumentElement>
+                        <diffgr:before>
+                          <AddDataDataTable020123.093118 diffgr:id="AddDataDataTable020123.0931181" msdata:rowOrder="0">
+                            <Column_x0020_Name>Tax Invoice No</Column_x0020_Name>
+                            <Data>{lastrefno}</Data>
+                          </AddDataDataTable020123.093118>
+                          <AddDataDataTable020123.093118 diffgr:id="AddDataDataTable020123.0931182" msdata:rowOrder="1">
+                            <Column_x0020_Name>Start Page No</Column_x0020_Name>
+                            <Data>{vNextStartPgNo}</Data>
+                          </AddDataDataTable020123.093118>
+                          <AddDataDataTable020123.093118 diffgr:id="AddDataDataTable020123.0931183" msdata:rowOrder="2">
+                            <Column_x0020_Name>End Page No</Column_x0020_Name>
+                            <Data>{vEndPageNo}</Data>
+                          </AddDataDataTable020123.093118>
+                          <AddDataDataTable020123.093118 diffgr:id="AddDataDataTable020123.0931184" msdata:rowOrder="3">
+                            <Column_x0020_Name>Status</Column_x0020_Name>
+                            <Data>P</Data>
+                          </AddDataDataTable020123.093118>
+                        </diffgr:before>
+                      </diffgr:diffgram>
+                    </v_AddDataDataTable>
+                  </ScriptCommand>
+                </AdditionalScriptCommands>
+                <AdditionalScriptCommands>
+                  <ScriptCommand xsi:type="PauseCommand" CommandID="2761acdd-7e64-444b-8845-46e955d565a3" CommandName="PauseCommand" IsCommented="false" SelectionName="Pause Script" DefaultPause="0" LineNumber="61" PauseBeforeExeucution="false" CommandEnabled="true" v_PauseLength="1000" />
+                </AdditionalScriptCommands>
+                <AdditionalScriptCommands>
+                  <ScriptCommand xsi:type="VariableCommand" CommandID="48369e82-2bc8-45b6-9d18-86d27742c3d7" CommandName="VariableCommand" IsCommented="false" SelectionName="Set Variable" DefaultPause="0" LineNumber="62" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="vNextStartPgNo" v_Input="⦃vStartPageNo⦄" v_ReplaceInputVariables="Yes" />
+                </AdditionalScriptCommands>
+                <AdditionalScriptCommands>
+                  <ScriptCommand xsi:type="EndIfCommand" CommandID="86b4061e-f44b-44f8-9928-3207f8ecad5d" CommandName="EndIfCommand" IsCommented="false" SelectionName="End If" DefaultPause="0" LineNumber="63" PauseBeforeExeucution="false" CommandEnabled="true" />
+                </AdditionalScriptCommands>
+              </AdditionalScriptCommands>
+              <AdditionalScriptCommands>
+                <ScriptCommand xsi:type="EndIfCommand" CommandID="35d7bd6d-64fa-4807-a719-405d0c143d7e" CommandName="EndIfCommand" IsCommented="false" SelectionName="End If" DefaultPause="0" LineNumber="64" PauseBeforeExeucution="false" CommandEnabled="true" />
+              </AdditionalScriptCommands>
+            </AdditionalScriptCommands>
+            <AdditionalScriptCommands>
+              <ScriptCommand xsi:type="VariableCommand" CommandID="4303c898-ad63-44aa-884e-e93f1d449e2a" CommandName="VariableCommand" IsCommented="false" SelectionName="Set Variable" DefaultPause="0" LineNumber="65" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="lastrefno" v_Input="⦃txinvno⦄" v_ReplaceInputVariables="Yes" />
+            </AdditionalScriptCommands>
+            <AdditionalScriptCommands>
+              <ScriptCommand xsi:type="EndLoopCommand" CommandID="be128a47-52f2-4322-a128-78338f2eeace" CommandName="EndLoopCommand" IsCommented="false" SelectionName="End Loop" DefaultPause="0" LineNumber="66" PauseBeforeExeucution="false" CommandEnabled="true" />
+            </AdditionalScriptCommands>
+          </AdditionalScriptCommands>
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="CommentCommand" CommandID="6a99d936-e48e-4f22-b259-c640952022d8" CommandName="CommentCommand" IsCommented="false" SelectionName="Add Code Comment" DefaultPause="0" LineNumber="67" PauseBeforeExeucution="false" v_Comment="Items in this section will run within the loop" CommandEnabled="true" />
+          </AdditionalScriptCommands>
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="GetDataTableRowCountCommand" CommandID="dbf1b405-d488-46ba-8ce2-8a510e11046e" CommandName="GetDataTableRowCountCommand" IsCommented="false" SelectionName="Get DataTable Row Count" DefaultPause="0" LineNumber="68" PauseBeforeExeucution="false" CommandEnabled="true" v_DataTableName="invDataTable" v_UserVariableName="dtRowCnt" />
+          </AdditionalScriptCommands>
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="ConvertDataTableToJSONCommand" CommandID="09926806-abca-4552-969a-91c747dcc4fd" CommandName="ConvertDataTableToJSONCommand" IsCommented="false" SelectionName="Convert DataTable To JSON" DefaultPause="0" LineNumber="69" PauseBeforeExeucution="false" CommandEnabled="true" v_DataTableName="invDataTable" v_OutputVariableName="⦃vJsonDt⦄" />
+          </AdditionalScriptCommands>
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="MessageBoxCommand" CommandID="44799cad-1549-4cb6-bc2f-8b1cf2eac64d" CommandName="MessageBoxCommand" IsCommented="true" SelectionName="Show Message" DefaultPause="0" LineNumber="70" PauseBeforeExeucution="false" CommandEnabled="true" v_Message="⦃dtRowCnt⦄" v_AutoCloseAfter="0" />
+          </AdditionalScriptCommands>
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="ExcelCreateApplicationCommand" CommandID="1d2432d8-e29f-4538-9867-f6c570143628" CommandName="ExcelOpenApplicationCommand" IsCommented="false" SelectionName="Create Excel Application" DefaultPause="0" LineNumber="71" PauseBeforeExeucution="false" CommandEnabled="true" v_InstanceName="RPAExcel" />
+          </AdditionalScriptCommands>
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="ExcelAddWorkbookCommand" CommandID="d2e880dd-2544-4cf6-97b5-c0a0a4e5399e" CommandName="ExcelAddWorkbookCommand" IsCommented="false" SelectionName="Add Workbook" DefaultPause="0" LineNumber="72" PauseBeforeExeucution="false" CommandEnabled="true" v_InstanceName="RPAExcel" v_IfWorkbookExists="" />
+          </AdditionalScriptCommands>
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="BeginNumberOfTimesLoopCommand" CommandID="2f96ec59-17e3-4e3c-bb9f-517af89cd67d" CommandName="BeginNumberOfTimesLoopCommand" IsCommented="false" SelectionName="Loop Number Of Times" DefaultPause="0" LineNumber="73" PauseBeforeExeucution="false" CommandEnabled="true" v_LoopParameter="⦃dtRowCnt⦄" v_LoopStart="0" />
+            <AdditionalScriptCommands>
+              <ScriptCommand xsi:type="CommentCommand" CommandID="8b4d9c0c-66d0-46e2-b24b-474a7b54820f" CommandName="CommentCommand" IsCommented="true" SelectionName="Add Code Comment" DefaultPause="0" LineNumber="74" PauseBeforeExeucution="false" v_Comment="Items in this section will run within the loop" CommandEnabled="true" />
+            </AdditionalScriptCommands>
+            <AdditionalScriptCommands>
+              <ScriptCommand xsi:type="ExcelSetRowValuesFromDataTableCommand" CommandID="e3121750-8cae-48be-b709-d1783e477590" CommandName="ExcelSetRowValuesFromDataTableCommand" IsCommented="false" SelectionName="Set Row Values From DataTable" DefaultPause="0" LineNumber="75" PauseBeforeExeucution="false" CommandEnabled="true" v_InstanceName="RPAExcel" v_ExcelRowIndex="⦃Loop.CurrentIndex⦄" v_DataTableVariable="invDataTable" v_DataTableRowIndex="⦃Loop.CurrentIndex⦄" v_ValueType="" v_IfDataTableNotEnough="" />
+            </AdditionalScriptCommands>
+            <AdditionalScriptCommands>
+              <ScriptCommand xsi:type="EndLoopCommand" CommandID="35f971f0-bb1d-49c9-802a-b5946986ce20" CommandName="EndLoopCommand" IsCommented="false" SelectionName="End Loop" DefaultPause="0" LineNumber="76" PauseBeforeExeucution="false" CommandEnabled="true" />
+            </AdditionalScriptCommands>
+          </AdditionalScriptCommands>
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="ExcelSaveCommand" CommandID="6ee4bb83-3e4c-4d5d-9659-6432902f1399" CommandName="ExcelSaveCommand" IsCommented="true" SelectionName="Save Workbook" DefaultPause="0" LineNumber="77" PauseBeforeExeucution="false" CommandEnabled="true" v_InstanceName="RPAExcel" />
+          </AdditionalScriptCommands>
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="ExcelSaveAsCommand" CommandID="66b39698-fa47-4807-b3ef-77b6d837d8f6" CommandName="ExcelSaveAsCommand" IsCommented="false" SelectionName="Save Workbook As" DefaultPause="0" LineNumber="78" PauseBeforeExeucution="false" CommandEnabled="true" v_InstanceName="RPAExcel" v_FileName="⦃vFoutPutFldr⦄" />
+          </AdditionalScriptCommands>
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="ExcelCloseApplicationCommand" CommandID="cfa1485f-ac59-40e9-9e30-74eefd0b5da4" CommandName="ExcelCloseApplicationCommand" IsCommented="false" SelectionName="Close Excel Application" DefaultPause="0" LineNumber="79" PauseBeforeExeucution="false" CommandEnabled="true" v_InstanceName="RPAExcel" v_ExcelSaveOnExit="False" />
+          </AdditionalScriptCommands>
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="WriteTextFileCommand" CommandID="11f0cc06-c8ff-4971-b7b0-68b9b82771ce" CommandName="WriteTextFileCommand" IsCommented="false" SelectionName="Write Text File" DefaultPause="0" LineNumber="80" PauseBeforeExeucution="false" CommandEnabled="true" v_FilePath="⦃vFoutPutFldr⦄" v_TextToWrite="⦃vJsonDt⦄" />
+          </AdditionalScriptCommands>
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="MoveFileCommand" CommandID="9527d791-cfaf-4236-8700-61e16d4b313f" CommandName="MoveFileCommand" IsCommented="false" SelectionName="Move/Copy File" DefaultPause="0" LineNumber="81" PauseBeforeExeucution="false" CommandEnabled="true" v_OperationType="Move File" v_SourceFilePath="⦃oFileName⦄" v_DestinationDirectory="C:\MH\POF\Processed" v_CreateDirectory="No" />
+          </AdditionalScriptCommands>
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="MailKitSendEmailCommand" CommandID="1b8748d0-2e5c-4b33-8d75-1df9ac1c9ea1" CommandName="MailKitSendEmailCommand" IsCommented="false" SelectionName="Send Email" DefaultPause="0" LineNumber="82" PauseBeforeExeucution="false" CommandEnabled="true" v_SMTPHost="smtp.zoho.com" v_SMTPPort="587" v_SMTPUserName="kishor.namburu@saisoftglobal.com" v_SMTPPassword="Moksha123$" v_SMTPFromEmail="kishor.namburu@saisoftglobal.com" v_SMTPToEmail="kishornbd@gmail.com" v_SMTPSubject="POD Files are scanned for today" v_SMTPBody="Dear User,&#xD;&#xA;&#xD;&#xA;Today'POD mails process has completed successfully.&#xD;&#xA;&#xD;&#xA;regards&#xD;&#xA;kishor" v_SMTPSecureOption="Use SSL or TLS" />
+          </AdditionalScriptCommands>
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="EndLoopCommand" CommandID="41631a8d-83f0-44dc-afeb-716bda1f755c" CommandName="EndLoopCommand" IsCommented="false" SelectionName="End Loop" DefaultPause="0" LineNumber="83" PauseBeforeExeucution="false" CommandEnabled="true" />
+          </AdditionalScriptCommands>
+        </AdditionalScriptCommands>
+        <AdditionalScriptCommands>
+          <ScriptCommand xsi:type="ElseCommand" CommandID="de17e00c-4592-4ba5-a818-bab3facd5de8" CommandName="ElseCommand" IsCommented="false" SelectionName="Else" DefaultPause="0" LineNumber="84" PauseBeforeExeucution="false" CommandEnabled="true" />
+        </AdditionalScriptCommands>
+        <AdditionalScriptCommands>
+          <ScriptCommand xsi:type="CommentCommand" CommandID="813289a1-2027-46aa-94d8-5d471d3ccfac" CommandName="CommentCommand" IsCommented="false" SelectionName="Add Code Comment" DefaultPause="0" LineNumber="85" PauseBeforeExeucution="false" v_Comment="Items in this section will run if the statement is true" CommandEnabled="true" />
+        </AdditionalScriptCommands>
+        <AdditionalScriptCommands>
+          <ScriptCommand xsi:type="MessageBoxCommand" CommandID="6ccf7863-d3ed-44e8-95cd-0aa4f501d9ee" CommandName="MessageBoxCommand" IsCommented="false" SelectionName="Show Message" DefaultPause="0" LineNumber="86" PauseBeforeExeucution="false" CommandEnabled="true" v_Message="There are no PDF files to scan and process" v_AutoCloseAfter="0" />
+        </AdditionalScriptCommands>
+        <AdditionalScriptCommands>
+          <ScriptCommand xsi:type="EndIfCommand" CommandID="29f18a31-3c0a-469c-90e3-e66465199bcd" CommandName="EndIfCommand" IsCommented="false" SelectionName="End If" DefaultPause="0" LineNumber="87" PauseBeforeExeucution="false" CommandEnabled="true" />
+        </AdditionalScriptCommands>
+      </AdditionalScriptCommands>
+      <AdditionalScriptCommands>
+        <ScriptCommand xsi:type="ElseCommand" CommandID="ec499885-9425-49c6-b18a-27e37789e6a3" CommandName="ElseCommand" IsCommented="false" SelectionName="Else" DefaultPause="0" LineNumber="88" PauseBeforeExeucution="false" v_Comment="Else for files are not found" CommandEnabled="true" />
+      </AdditionalScriptCommands>
+      <AdditionalScriptCommands>
+        <ScriptCommand xsi:type="MessageBoxCommand" CommandID="c49a138b-adde-4f9d-9f2c-205c0bec6281" CommandName="MessageBoxCommand" IsCommented="false" SelectionName="Show Message" DefaultPause="0" LineNumber="89" PauseBeforeExeucution="false" CommandEnabled="true" v_Message="There is no floder with the mentioned Name ⦃vUnpFloder⦄" v_AutoCloseAfter="0" />
+      </AdditionalScriptCommands>
+      <AdditionalScriptCommands>
+        <ScriptCommand xsi:type="EndIfCommand" CommandID="8a4d82f5-5682-4386-9b43-fc0b29e8dfd0" CommandName="EndIfCommand" IsCommented="false" SelectionName="End If" DefaultPause="0" LineNumber="90" PauseBeforeExeucution="false" CommandEnabled="true" />
+      </AdditionalScriptCommands>
+    </ScriptAction>
+  </Commands>
+  <Info>
+    <TasktVersion>3.5.1.14</TasktVersion>
+    <Author />
+    <LastRunTime>2023-03-01T12:16:33.755257+04:00</LastRunTime>
+    <RunTimes>286</RunTimes>
+    <ScriptVersion>0.0.0</ScriptVersion>
+    <Description />
+  </Info>
+  <Variables>
+    <ScriptVariable>
+      <VariableName>vIndex</VariableName>
+      <VariableValue xsi:type="xsd:string">1</VariableValue>
+    </ScriptVariable>
+    <ScriptVariable>
+      <VariableName>vPdfText</VariableName>
+      <VariableValue xsi:type="xsd:string"></VariableValue>
+    </ScriptVariable>
+    <ScriptVariable>
+      <VariableName>vEndPageNo</VariableName>
+      <VariableValue xsi:type="xsd:string">1</VariableValue>
+    </ScriptVariable>
+    <ScriptVariable>
+      <VariableName>lastrefno</VariableName>
+      <VariableValue xsi:type="xsd:string">0</VariableValue>
+    </ScriptVariable>
+    <ScriptVariable>
+      <VariableName>vNextStartPgNo</VariableName>
+      <VariableValue xsi:type="xsd:string">0</VariableValue>
+    </ScriptVariable>
+    <ScriptVariable>
+      <VariableName>vStartPageNo</VariableName>
+      <VariableValue xsi:type="xsd:string">0</VariableValue>
+    </ScriptVariable>
+    <ScriptVariable>
+      <VariableName>txinvno</VariableName>
+      <VariableValue xsi:type="xsd:string">0</VariableValue>
+    </ScriptVariable>
+    <ScriptVariable>
+      <VariableName>vJsonDt</VariableName>
+      <VariableValue xsi:type="xsd:string"></VariableValue>
+    </ScriptVariable>
+    <ScriptVariable>
+      <VariableName>vPosition</VariableName>
+      <VariableValue xsi:type="xsd:string">1</VariableValue>
+    </ScriptVariable>
+    <ScriptVariable>
+      <VariableName>vUnpFloder</VariableName>
+      <VariableValue xsi:type="xsd:string">C:\MH\POF\Unprocessed</VariableValue>
+    </ScriptVariable>
+    <ScriptVariable>
+      <VariableName>vPodFileName</VariableName>
+      <VariableValue xsi:type="xsd:string">TAXINVOICE_</VariableValue>
+    </ScriptVariable>
+    <ScriptVariable>
+      <VariableName>vDate</VariableName>
+      <VariableValue xsi:type="xsd:string"></VariableValue>
+    </ScriptVariable>
+    <ScriptVariable>
+      <VariableName>vFileName</VariableName>
+      <VariableValue xsi:type="xsd:string"></VariableValue>
+    </ScriptVariable>
+    <ScriptVariable>
+      <VariableName>vFileCount</VariableName>
+      <VariableValue xsi:type="xsd:string"></VariableValue>
+    </ScriptVariable>
+    <ScriptVariable>
+      <VariableName>voutFileName</VariableName>
+      <VariableValue xsi:type="xsd:string"></VariableValue>
+    </ScriptVariable>
+    <ScriptVariable>
+      <VariableName>vOutPutFldr</VariableName>
+      <VariableValue xsi:type="xsd:string">C:\MH\POF\output</VariableValue>
+    </ScriptVariable>
+  </Variables>
+</Script>

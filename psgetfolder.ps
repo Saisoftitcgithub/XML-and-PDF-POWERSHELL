@@ -1,0 +1,9 @@
+$id = "FLPR-17-001"
+$url = "http://192.168.0.150:80/seeddms/restapi/index.php/folder/$id"
+
+$response = Invoke-WebRequest -Uri $url -Method Get -UseBasicParsing
+
+$responseContent = $response.Content
+
+$jsonObject = ConvertFrom-Json $responseContent
+

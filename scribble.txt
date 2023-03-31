@@ -1,0 +1,29 @@
+http://192.168.0.150:80/seeddms/restapi/index.php/login
+
+curl -X POST \
+  http://192.168.0.150:80/seeddms/restapi/index.php/login \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  -d 'user=admin&pass=admin'
+
+
+
+curl -X POST \
+  -c cookies.txt \
+  -d 'user=admin&pass=admin' \
+  http://192.168.0.150:80/seeddms/restapi/index.php/login
+
+
+
+curl -X POST http://192.168.0.150:80/seeddms/restapi/index.php/login -H 'Content-Type: application/x-www-form-urlencoded' -d 'user=admin&pass=admin'
+
+
+curl -i -X POST http://192.168.0.150:80/seeddms/restapi/index.php/login -H 'Content-Type: application/x-www-form-urlencoded' -d "user=admin&pass=admin" | findstr /i "Set-Cookie"
+
+
+curl -X GET http://192.168.0.150:80/seeddms/restapi/index.php/folder/FLPR-17-001 -b "mydms_session=0a57f3cc1a01a6e5ba6279d3b6c29a28"
+
+
+
+
+
+curl -X POST http://192.168.0.150:80/seeddms/restapi/index.php/login -H 'Content-Type: application/x-www-form-urlencoded' -d "user=admin&pass=admin"
